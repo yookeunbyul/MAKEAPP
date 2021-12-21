@@ -1,0 +1,67 @@
+<html>
+	<head>
+		{% load static %}
+		<meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+		<!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+		<!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="{% static 'css/css.css' %}">
+	</head>
+
+    <body>
+<!--Navbar start-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-black" href="http://27.96.135.73:8000/yook/main"><i class="fab fa-mizuni d-inline-block align-text-top"></i> Make App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="http://27.96.135.73:8000/yook/main">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="http://27.96.135.73:8000/yook/main">Product</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="http://27.96.135.73:8000/yook/main">Process</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="http://27.96.135.73:8000/yook/main">Contact</a></li>
+						<li class="nav-item mx-0 mx-lg-1 dropdown">
+							<a class="nav-link py-3 px-0 px-lg-3 text-black rounded dropdown-toggle id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Recruit
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="http://27.96.135.73:8000/yook/recruit">지원</a></li>
+								<li><a class="dropdown-item" href="http://27.96.135.73:8000/yook/recruit_check">지원 확인</a></li>
+							</ul>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<!--Navbar end-->
+        <!-- Form start -->
+			<div class="container h-100 d-flex justify-content-center">
+				<div class="row my-auto">
+					<div class="text-center my-5"><i class="fab fa-mizuni fa-5x"></i></div>
+					<p id="recruit_title" class="fs-1 text-center text-uppercase text-black my-3 mb-5">대학생 연합 앱 런칭 동아리, <span id="title">MAKE APP</span>
+						<br>
+						29기 지원 접수 완료
+					</p>
+					<hr>
+					<p id="recruit_title" class="fs-2 text-center text-uppercase text-muted mb-3 mt-5">지원 접수가 완료되었습니다.</p>
+					<p id="recruit_title" class="fs-5 text-center text-uppercase text-muted"><i class="far fa-envelope"></i> 면접시간은 문자로 안내드리겠습니다.</p>
+					<div class="d-grid gap-2 col-md-4 col-12 mx-auto my-5">
+						<a class="btn btn-lg btn-primary" href="http://27.96.135.73:8000/yook/recruit_check" role="button">지원 확인</a>
+					</div>
+				</div>
+            </div>
+		<!--Footer-->
+		<footer class="footer">
+			<div class="text-center bg-dark text-muted py-5">
+				Copyright © YOOK EUN BYUL 2021
+			</div>
+		</footer>
+    </body>
+</html>

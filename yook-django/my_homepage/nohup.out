@@ -1,0 +1,155 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 05:33:10
+Django version 3.2.6, using settings 'my_homepage.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+로그인 성공
+[07/Sep/2021 05:45:52] "POST /yook/logged HTTP/1.1" 200 7460
+Not Found: /yook/logㅑㅜ
+[07/Sep/2021 05:45:57] "GET /yook/log%E3%85%91%E3%85%9C HTTP/1.1" 404 3877
+[07/Sep/2021 05:46:01] "GET /yook/login HTTP/1.1" 200 9463
+로그인 성공
+[07/Sep/2021 05:48:50] "POST /yook/logged HTTP/1.1" 200 7460
+/root/yook-django/my_homepage/member/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 09:41:01
+Django version 3.2.6, using settings 'my_homepage.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/root/yook-django/my_homepage/member/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 09:41:31
+Django version 3.2.6, using settings 'my_homepage.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[07/Sep/2021 09:41:33] "GET /yook/login HTTP/1.1" 200 9463
+로그인 성공
+[07/Sep/2021 09:41:47] "POST /yook/logged HTTP/1.1" 200 7460
+[07/Sep/2021 09:41:50] "GET /yook/login HTTP/1.1" 200 9463
+로그인 실패
+[07/Sep/2021 09:41:53] "POST /yook/logged HTTP/1.1" 302 0
+Not Found: /login
+[07/Sep/2021 09:41:53] "GET /login HTTP/1.1" 404 2205
+/root/yook-django/my_homepage/member/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 09:42:10
+Django version 3.2.6, using settings 'my_homepage.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[07/Sep/2021 09:42:11] "GET /yook/login HTTP/1.1" 200 9463
+로그인 실패
+[07/Sep/2021 09:42:14] "POST /yook/logged HTTP/1.1" 302 0
+[07/Sep/2021 09:42:14] "GET /yook/login HTTP/1.1" 200 9463
+/root/yook-django/my_homepage/member/urls.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/commands/runserver.py", line 118, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/management/base.py", line 423, in check
+    databases=databases,
+  File "/usr/local/lib/python3.6/dist-packages/django/core/checks/registry.py", line 76, in run_checks
+    new_errors = check(app_configs=app_configs, databases=databases)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python3.6/dist-packages/django/core/checks/urls.py", line 23, in check_resolver
+    return check_method()
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 412, in check
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 598, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python3.6/dist-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/resolvers.py", line 591, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/yook-django/my_homepage/my_homepage/urls.py", line 21, in <module>
+    path('yook/', include('member.urls'))
+  File "/usr/local/lib/python3.6/dist-packages/django/urls/conf.py", line 34, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/yook-django/my_homepage/member/urls.py", line 5, in <module>
+    path('main', views.main),
+AttributeError: module 'member.views' has no attribute 'main'
+
+/root/yook-django/my_homepage/member/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 14:06:17
+Django version 3.2.6, using settings 'my_homepage.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+/root/yook-django/my_homepage/member/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+September 07, 2021 - 14:06:29
+Django version 3.2.6, using settings 'my_homepage.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+[07/Sep/2021 14:08:03] "GET /yook/main HTTP/1.1" 200 762
+Not Found: /docs/5.0/assets/brand/bootstrap-logo.svg
+[07/Sep/2021 14:08:03] "GET /docs/5.0/assets/brand/bootstrap-logo.svg HTTP/1.1" 404 2310
+[07/Sep/2021 14:14:15] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:15] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:16] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:16] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:16] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:16] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:16] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:17] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:17] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:17] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:17] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:17] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:17] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:17] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:22] "GET /yook/main HTTP/1.1" 200 741
+[07/Sep/2021 14:14:22] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:14:37] "GET /yook/main HTTP/1.1" 200 738
+[07/Sep/2021 14:14:37] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:20:15,132] - Broken pipe from ('178.128.125.154', 61000)
+
+[07/Sep/2021 14:38:00] "GET /yook/main HTTP/1.1" 200 508
+[07/Sep/2021 14:38:00] "GET /static/star.png HTTP/1.1" 404 1786
+[07/Sep/2021 14:38:01] "GET /yook/main HTTP/1.1" 200 508
+[07/Sep/2021 14:38:01] "GET /static/star.png HTTP/1.1" 404 1786

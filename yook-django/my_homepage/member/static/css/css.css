@@ -1,0 +1,65 @@
+nav{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+#section_title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+section{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+#project_text{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+#project_bold{
+    font-weight: 500;
+}
+.contact{
+    color:black;
+}
+.contact:hover{
+    color:black;
+}
+.box{
+    position: relative;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+.text{
+    position: absolute;
+    top:140px;
+    left:350px;
+    color: white;
+}
+.carousel_title{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+#title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+html {
+    height: 100%;
+    scroll-padding-top: calc(4.5rem - 1px);
+}
+.page-section {
+    padding: 6rem 0;
+}
+.recruit{
+    text-decoration-line: none;
+}
+.recruit:hover{
+    color:white;
+}
+#recruit_title{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+#recruit_check{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}

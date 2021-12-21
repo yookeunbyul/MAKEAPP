@@ -1,0 +1,489 @@
+<html>
+	<head>
+		{% load static %}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+		<!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+		<!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="{% static 'css/css.css' %}">
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	</head>
+	<body id="page-top">
+		<!--Navbar start-->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand text-black" href="#page-top"><i class="fab fa-mizuni d-inline-block align-text-top"></i> Make App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="#about">About</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="#product">Product</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="#process">Process</a></li>
+						<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 text-black rounded" href="#contact">Contact</a></li>
+						<li class="nav-item mx-0 mx-lg-1 dropdown">
+							<a class="nav-link py-3 px-0 px-lg-3 text-black rounded dropdown-toggle id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Recruit
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="http://27.96.135.73:8000/yook/recruit">지원</a></li>
+								<li><a class="dropdown-item" href="http://27.96.135.73:8000/yook/recruit_check">지원 확인</a></li>
+							</ul>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+		<!--Navbar end-->
+		<!--carousel start-->
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{% static 'h1.jpg'%}" class="d-block w-100">
+					<div class="carousel-caption d-none d-lg-block carousel_title">
+                        <p class="fs-1" style="margin-bottom: 18vw;">
+                            대학생 연합 앱 런칭 동아리, <span id="title">MAKE APP</span>
+							<br>
+							작은 아이디어로 세상을 변화시킵니다.
+						</p>
+                    </div>
+				</div>
+				<div class="carousel-item">
+					<img src="{% static 'h2.jpg'%}" class="d-block w-100">
+					<div class="carousel-caption d-none d-lg-block carousel_title">
+                        <p class="fs-1" style="margin-bottom: 18vw;">
+                            대학생 연합 앱 런칭 동아리, <span id="title">MAKE APP</span>
+							<br>
+							작은 아이디어로 세상을 변화시킵니다.
+						</p>
+                    </div>
+				</div>
+				<div class="carousel-item">
+					<img src="{% static 'h3.jpg'%}" class="d-block w-100">
+					<div class="carousel-caption d-none d-lg-block carousel_title">
+                        <p class="fs-1" style="margin-bottom: 18vw;">
+                            대학생 연합 앱 런칭 동아리, <span id="title">MAKE APP</span>
+							<br>
+							작은 아이디어로 세상을 변화시킵니다.
+						</p>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+		<!--carousel end-->
+		<!--About section-->
+		<section class="page-section" id="about" style="margin-top: 5vw;">
+			<div class="container">
+				<h2 class="page-section-heading text-center text-uppercase text-black my-3" id="section_title">About</h2>
+				<p class="text-center text-muted mb-5 lead">대학생 연합 앱 런칭 동아리 MAKE APP입니다.</p>
+				<div class="row">
+					<div class="text-center mt-5 col-lg-4 col-12">
+						<div><i class="my-4 fab fa-app-store-ios fa-5x"></i></div>
+						<h4 class="font-weight-bold mb-3">수익형 앱 런칭</h5>
+						<p class="lead">MAKE APP은 선별된 디자이너/개발자 간에 팀을 이뤄 앱을 런칭합니다. 창업 기획 등은 최소화 하여 '나만의 수익형 앱'을 만드는데 집중합니다.
+						</p>
+					</div>
+					<div class="text-center mt-5 col-lg-4 col-12">
+						<div><i class="my-4 fas fa-share-alt-square fa-5x"></i></div>
+						<h4 class="font-weight-bold mb-3">다양한 해커톤/공모전</h5>
+						<p class="lead">마음 맞는 팀원들과 유닛으로 팀을 이뤄 다양한 대외활동을 진행합니다. 기획자, 개발자, 디자이너가 협업하는 프로젝트를 통해 실무에 가까운 경험을 쌓습니다.
+						</p>
+					</div>
+					<div class="text-center mt-5 col-lg-4 col-12">
+						<div><i class="my-4 fas fa-users fa-5x"></i></div>
+						<h4 class="font-weight-bold mb-3">개발자와 디자이너의 교류</h5>
+						<p class="lead">매주 1회 진행되는 세션과 자율적으로 진행되는 스터디를 통해 개발자와 디자이너의 지속적인 교류가 이뤄집니다. 또한 IT업계에 진출한 현직자들의 조언을 얻을 수 있습니다.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--About section end-->
+		<!--Product section start-->
+		<section class="page-section" id="product" style="margin-top: 5vw;">
+			<div class="product_intro">
+				<div class="container">
+					<h2 class="page-section-heading text-center text-uppercase text-black my-3" id="section_title">Product</h2>
+					<p class="text-center text-muted mb-5 lead">MAKE APP이 출시한 애플리케이션들을 소개합니다.</p>
+					<div class="row">
+						<div class="col-lg-4 col-10 ms-auto mt-5">
+							<h1 id="project_text">
+								MAKE APP은
+								<br>
+								<span id="project_bold">어떤 프로젝트를</span>
+								<br>
+								했나요?
+							</h1>
+						</div>
+						<div class="text-end col-lg-4 col-10 me-auto mt-5">
+							<h1 id="project_text">
+								<br>
+								<span id="project_bold">100 + α </span>의
+								<br>
+								프로젝트
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="product_list" style="margin-top: 8vw;">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-lg-2 col-3 ms-auto">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal1">
+								<img src="{% static 'icon.png'%}" class="mx-1 my-3" width="100" height="100">
+							</div>
+						</div>
+						<div class="col-lg-2 col-3">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal2">
+								<img src="{% static 'icon2.png'%}" class=" mx-1 my-3" width="100" height="100">
+							</div>
+						</div>
+						<div class="col-lg-2 col-3 me-auto">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal3">
+								<img src="{% static 'icon3.png'%}" class="mx-1 my-3" width="100" height="100">
+							</div>
+						</div>
+					</div>
+					<div class="row d-flex justify-content-center">
+						<div class="col-lg-2 col-3 ms-auto">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal4">
+								<img src="{% static 'icon4.png'%}" class="mx-1 my-4" width="100" height="100">
+							</div>
+						</div>
+						<div class="col-lg-2 col-3">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal5">
+								<img src="{% static 'icon5.png'%}" class=" mx-1 my-4" width="100" height="100">
+							</div>
+						</div>
+						<div class="col-lg-2 col-3 me-auto">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal6">
+								<img src="{% static 'icon6.png'%}" class="mx-1 my-4" width="100" height="100">
+							</div>
+						</div>
+					</div>
+					<div class="row d-flex justify-content-center">
+						<div class="col-lg-2 col-3 ms-auto">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal7">
+								<img src="{% static 'icon7.png'%}" class="mx-1 my-4" width="100" height="100">
+							</div>
+						</div>
+						<div class="col-lg-2 col-3">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal8">
+								<img src="{% static 'icon8.png'%}" class="mx-1 my-4" width="100" height="100">
+							</div>
+						</div>
+						<div class="col-lg-2 col-3 me-auto">
+							<div class="text-center" data-bs-toggle="modal" data-bs-target="#productModal9">
+								<img src="{% static 'icon9.png'%}" class="mx-1 my-4" width="100" height="100">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Product section start-->
+		<!--Process section start-->
+		<section class="page-section" id="process" style="margin-top: 5vw;">
+			<div class="container">
+				<h2 class="page-section-heading text-center text-uppercase text-black my-3" id="section_title">Process</h2>
+				<p class="text-center text-muted mb-5 lead">MAKE APP과 함께하기 위한 과정입니다.</p>
+				<div class="row">
+					<div class="text-center mt-5 mb-3 col-lg-3 col-12 ms-auto">
+						<div><i class="my-4 fas fa-scroll fa-4x" style="color: black;"></i></div>
+						<h4 class="font-weight-bold mb-3">서류접수 및 면접</h5>
+						<p class="text-muted lead">2021년 09~12월</p>
+					</div>
+					<div class="text-center mt-5 mb-3 col-lg-3 col-12">
+						<div><i class="my-4 far fa-handshake fa-4x" style="color: black;"></i></div>
+						<h4 class="font-weight-bold mb-3">합격자 발표</h5>
+						<p class="text-muted lead">2022년 01월</p>
+					</div>
+					<div class="text-center mt-5 mb-3 col-lg-3 col-12 me-auto">
+						<div><i class="my-4 fas fa-project-diagram fa-4x" style="color: black;"></i></div>
+						<h4 class="font-weight-bold mb-3">과정 진행</h5>
+						<p class="text-muted lead">2022년 01월~06월
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="box" style="margin-top: 5vw;">
+				<div class="text d-none d-xxl-block">
+					<p class="fs-1">대학생 연합 앱 런칭 동아리 MAKE APP에서
+					<br> 29기 신입회원을 모집합니다.</p>
+					<p class="fs-4">2021.09.16~12.15</p>
+					<button type="button" class="btn btn-outline-primary btn-lg"><a class="recruit" href="http://27.96.135.73:8000/yook/recruit">지원하기</a></button>
+				</div>
+				<div class="image">
+					<img src="{% static '4.jpg'%}" class="d-block w-100">
+				</div>
+			</div>
+		</section>
+		<!--Process section end-->
+		<!--Contact section start-->
+		<section class="page-section" id="contact" style="margin-top: 5vw; margin-bottom: 3vw;">
+			<div class="container">
+				<h2 class="page-section-heading text-center text-uppercase text-black my-3" id="section_title">Contact</h2>
+				<p class="text-center text-muted mb-5 lead">MAKE APP은 언제나 열려있습니다.</p>
+				<div class="row d-flex justify-content-center">
+					<div class="text-center col-lg-1 col-3 mx-1 ms-auto">
+						<a href="https://ko-kr.facebook.com/"><i class="contact fab fa-facebook-square fa-7x"></i></a>
+					</div>
+					<div class="text-center col-lg-1 col-3">
+						<a href="https://www.instagram.com/?hl=ko"><i class="contact fab fa-instagram fa-7x"></i></a>
+					</div>
+					<div class="text-center col-lg-1 col-3 mx-1 me-auto">
+						<a href="#"><i class="contact fas fa-envelope-square fa-7x"></i></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Contact section end-->
+		<!--Footer-->
+		<footer class="footer">
+			<div class="text-center bg-dark text-muted py-5">
+				Copyright © YOOK EUN BYUL 2021
+			</div>
+		</footer>
+		<!-- product Modal 1-->
+        <div class="portfolio-modal modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Scanner Air - Scan Documents</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Need a scanner?
+										Scan, edit and sign your documents easily.
+										Download your scanner now!
+										<br>
+										• Scan, sign, and share any document from your iPhone or iPad.
+										<br>
+										• Instantly scan any written, printed or graphic document.
+										<br>
+										• Sign your documents by using e-signature.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 2-->
+        <div class="portfolio-modal modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Zeitgeist</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon2.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Zeitgeist helps you stay on top of your Vercel deployments.
+										See deployments wait, build, and finish (or fail), and quickly access their URLs, logs, or commits.
+										And by becoming a supporter with a subscription, you can enable push notifications for your builds.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 3-->
+        <div class="portfolio-modal modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Food Diary by Moderation</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon3.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Moderation is a radically simple food diary which aims to bring the fun back to tracking what you eat. The App removes the complexity of scanning barcodes or calorie counting, and instead presents a simple interface to quickly record if what you have eaten was healthy or not.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 4-->
+        <div class="portfolio-modal modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Around</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon4.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Discover video meetings where teamwork is more than just talk. Turn ideas into action with real-time collaboration powered by Around.
+										Around ensures that the time your team spends together is as effective, productive, and enjoyable as possible. Thousands of teams prefer us for daily collaboration, ranging from design studios to the world’s most innovative companies. Learn more about Around and try us out for free at around.co.
+									</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 5-->
+        <div class="portfolio-modal modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">HEY Email</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon5.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">It’s “you’ll never go back” better HEY replaces workarounds, messy hacks, and daily frustrations, with built-in workflows, effortless organization, and clever features that levels-up email in meaningful ways.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 6-->
+        <div class="portfolio-modal modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Basecamp 3</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon6.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Running your business on email, texts, and meetings? It’s time to switch to Basecamp 3 instead. Trusted by hundreds of thousands of businesses worldwide, Basecamp is the saner, organized way to manage projects and communicate within your company.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 7-->
+        <div class="portfolio-modal modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModal7" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Everlog</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon7.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Everlog is a lightweight and elegant journal and diary app that helps you reflect on your life. Everlog was created with the simple premise of being fast and uncluttered, so it's just you and your thoughts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 8-->
+        <div class="portfolio-modal modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModal8" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Photo Editor Ⓞ</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon8.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Photo Editor allows you to edit and enhance your photos like a pro - download now for free!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!-- product Modal 9-->
+        <div class="portfolio-modal modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModal9" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Next Up - A Podcast Alarm</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img src="{% static 'icon9.png'%}" class="img-fluid my-5">
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Start with 5 free alarms! No commitments, no catch.
+										One app, 750,000+ new ways to wake up. Ditch the alarm sounds and music. Ease into morning with a podcast instead.
+										Next Up is a full-featured podcast alarm clock designed to make mornings better.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		{% if messages %}
+			{% for message in messages %}
+				<script>
+					alert('{{message}}')
+					window.location.href = "http://27.96.135.73:8000/yook/main";
+				</script>
+			{% endfor %}
+		{% endif %}
+	</body>
+</html>

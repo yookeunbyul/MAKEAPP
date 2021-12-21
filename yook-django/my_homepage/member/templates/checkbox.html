@@ -1,0 +1,15 @@
+<html>
+	<head>
+	</head>
+
+	<body>
+        <form action="http://27.96.135.73:8000/yook/checkbox_result" method="POST">
+            {% csrf_token %}
+            <input type="checkbox" name="my_id" value="travel">travel</input>
+            <input type="checkbox" name="my_id" value="holiday">holiday</input>
+            <input type="checkbox" name="my_id" value="choosuck">choosuck</input>
+            <button type="submit">전송</button>
+        </form>
+		
+	</body>
+</html>

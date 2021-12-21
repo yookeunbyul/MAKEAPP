@@ -1,0 +1,258 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <style>
+        @use postcss-preset-env {
+        stage: 0;
+        }
+
+
+        :root {
+        --color-text: #000;
+        --color-background: #f0f0f0;
+        }
+
+        * {
+        background-color: transparent;
+        box-sizing: inherit;
+        }
+
+        html {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        }
+
+        body {
+        background-color: var(--color-text);
+        color: var(--color-text);
+        font-family: Merriweather, serif;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.875;
+        margin: 0;
+        min-height: 100vh;
+        }
+
+        body::-webkit-scrollbar-thumb {
+        background-color: var(--color-background);
+        }
+
+        body::-webkit-scrollbar {
+        height: 0.5em;
+        width: 0.25em;
+        }
+
+        a {
+        color: inherit;
+        text-decoration: none;
+        }
+
+        img {
+        height: auto;
+        max-width: 100%;
+        vertical-align: middle;
+        }
+
+        h2 {
+        font-family: Lato, sans-serif;
+        font-size: 6rem;
+        font-weight: 600;
+        line-height: 1.2;
+        margin-bottom: 0.125em;
+        }
+
+        p {
+        margin-bottom: 1.5em;
+        margin-top: 0;
+        max-width: 72ch;
+        }
+
+        svg {
+        display: inline-block;
+        fill: currentColor;
+        height: 1em;
+        vertical-align: middle;
+        width: 1em;
+        }
+
+        .grid {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1440px;
+        width: 90%;
+        }
+
+        .header,
+        .footer {
+        color: var(--color-background);
+        display: flex;
+        font-family: Lato, sans-serif;
+        inset-inline: 0;
+        mix-blend-mode: difference;
+        padding: 1.5em 3em;
+        position: fixed;
+        z-index: 1;
+        }
+
+        .header {
+        inset-block-start: 0;
+        justify-content: flex-end;
+        }
+
+        .icon {
+        font-size: 1.75rem;
+        }
+
+        .footer {
+        inset-block-end: 0;
+        justify-content: space-between;
+        }
+
+        .language-switch {
+        display: flex;
+        list-style: none;
+        gap: 1em;
+        margin: 0;
+        padding: 0;
+        }
+
+        .language-switch__link--active {
+        font-weight: 700;
+        }
+
+        .navigation {
+        font-size: 1.33rem;
+        text-transform: lowercase;
+        }
+
+        .navigation__link::after {
+        content: ".";
+        }
+
+        .navigation__link--active {
+        font-weight: 700;
+        }
+
+        .navigation__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        .navigation__list--inline {
+        display: flex;
+        gap: 1.5em 3em;
+        }
+
+        .section {
+        background-color: var(--color-background);
+        display: grid;
+        padding-bottom: 6em;
+        padding-top: 6em;
+        place-items: center;
+        position: relative;
+        }
+
+        .section ::selection {
+        background-color: var(--color-text);
+        color: var(--color-background);
+        }
+
+        .section--dark {
+        background-color: var(--color-text);
+        color: var(--color-background);
+        }
+
+        .section--dark ::selection {
+        background-color: var(--color-background);
+        color: var(--color-text);
+        }
+
+        .section--full {
+        min-height: 100vh;
+        }
+
+        .social-profiles {
+        display: flex;
+        gap: 1em;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        }
+
+        .social-profiles__link {
+        color: var(--color-background);
+        }
+
+    </style>
+    </head>
+    <body>
+            <header class="header">
+                <nav class="navigation">
+                <ul class="navigation__list navigation__list--inline">
+                    <li class="navigation__item">
+                    <a href="#about" class="navigation__link navigation__link--active">About</a>
+                    </li>
+                    <li class="navigation__item">
+                    <a href="#work" class="navigation__link">Work</a>
+                    </li>
+                    <li class="navigation__item">
+                    <a href="#contact" class="navigation__link">Contact</a>
+                    </li>
+                    <li class="navigation__item">
+                    <a href="http://27.96.135.73:8000/yook/logout" class="navigation__link">Logout</a>
+                    </li>
+                </ul>
+                </nav>
+            </header>
+            <main class="main">
+                <section class="section section--dark section--full" id="about">
+                <div class="grid">
+                    <h2>About</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                    veniam neque, hic mollitia adipisci explicabo asperiores eaque
+                    nostrum labore! Nihil earum unde quia numquam accusantium
+                    perspiciatis ea maxime nam similique.
+                    </p>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Consectetur natus magni quos asperiores tempora eos praesentium.
+                    </p>
+                </div>
+                </section>
+                <section class="section section--full" id="work">
+                <div class="grid">
+                    <h2>Work</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+                    recusandae doloribus illo officia sunt obcaecati?
+                    </p>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                    veniam neque, hic mollitia adipisci explicabo asperiores eaque
+                    nostrum labore! Nihil earum unde quia numquam accusantium
+                    perspiciatis ea maxime nam similique.
+                    </p>
+                </div>
+                </section>
+                <section class="section section--dark section--full" id="contact">
+                <div class="grid">
+                    <h2>Contact</h2>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                    veniam neque, hic mollitia adipisci explicabo asperiores eaque
+                    nostrum labore! Nihil earum unde quia numquam accusantium
+                    perspiciatis ea maxime nam similique.
+                    </p>
+                    <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Cupiditate, pariatur.
+                    </p>
+                </div>
+                </section>
+            </main>
+    </body>
+</html>

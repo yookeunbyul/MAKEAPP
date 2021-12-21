@@ -1,4 +1,5 @@
 # MAKEAPP
+![Make-app Mockup](https://user-images.githubusercontent.com/91243651/146887297-ea042196-b1c3-471b-9df5-2770bc515d0c.png)
 
 ### 💡 상세 내용
 
